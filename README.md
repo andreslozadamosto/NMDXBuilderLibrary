@@ -9,7 +9,7 @@ This library help us to create MDX queries easily. It's based on Decorator patte
 
 Targets
 -------
-It was tested on MS SQL Analysis Server (SASS) and SAP BW enviroments (you can add Variables for BW QueryCubes ).
+It was tested on MS SQL Analysis Server (SSAS) and SAP BW enviroments (you can add Variables for BW QueryCubes ).
 
 Examples
 --------
@@ -47,23 +47,24 @@ Common MDX features
 - Simple MDX Query (with template)
 - Functions:
 	- AVG
-- - BottomCount
-- - BottomSum
-- - Count
-- - Covariance
-- - CovarianceN
-- - CrossJoin
-- - Head
-- - NonEmpty
-- - Order
-- - Tail
-- - TopCount
-- - With feature (partially)
-- - Where feature
+	- BottomCount
+	- BottomSum
+	- Count
+	- Covariance
+	- CovarianceN
+	- CrossJoin
+	- Head
+	- NonEmpty
+	- Order
+	- Tail
+	- TopCount
+	- With feature (partially)
+	- Where feature
 
 Vendors
 - SAP
--- QueryCube variables
+	- QueryCube variables
+- SSAS
 
 Licence
 -------
