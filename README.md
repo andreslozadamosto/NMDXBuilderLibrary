@@ -9,12 +9,12 @@ This library help us to create MDX queries easily. It's based on Decorator patte
 
 Targets
 -------
-It was tested on MS SQL Analysis Server and SAP BW enviroments.
+It was tested on MS SQL Analysis Server (SASS) and SAP BW enviroments (you can add Variables for BW QueryCubes ).
 
 Examples
 --------
 
-__MDX generator__
+__MDX generator for SAP__
 	//builder
 	SAPMDXBuilder Builder = new SAPMDXBuilder();
 	Builder.CubeName = "Ventas";
@@ -25,8 +25,6 @@ __MDX generator__
 	CrossJoin.AddCrossJointTo(new MemberAxisItem("[CITY].Members"));
 	RowAxis.AxisItem = new NonEmpty(CrossJoin);
 
-	
-	
 	//Column Axis
 	MDXAxis ColumnAxis = new MDXAxis(MDXAxis.COLUMN_AXIS);
 	SetAxisItem setList = new SetAxisItem(new MemberAxisItem("[Measures].[ventas]"));
@@ -36,5 +34,37 @@ __MDX generator__
 	//Add Axis to Builder
 	Builder.AddAxis(RowAxis);
 	Builder.AddAxis(ColumnAxis);
+	
+	//Add SAP Variables
+	Builder.AddVariable(new MDXSAPVariable("Country", true, MDXSAPVariable.COMP_EQ, "AR"));
+	Builder.AddVariable(new MDXSAPVariable("Country", true, MDXSAPVariable.COMP_EQ, "CL"));
+	
+	string query = Builder.Build();
+	
+Implemented
+-----------
+Common MDX features
+- Simple MDX Query (with template)
+- Functions:
+-- AVG
+-- BottomCount
+-- BottomSum
+-- Count
+-- Covariance
+-- CovarianceN
+-- CrossJoin
+-- Head
+-- NonEmpty
+-- Order
+-- Tail
+-- TopCount
+-- With feature (partially)
+-- Where feature
 
-	string query = Builder.build();
+Vendors
+- SAP
+-- QueryCube variables
+
+Licence
+-------
+MIT
