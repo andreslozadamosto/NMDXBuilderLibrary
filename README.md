@@ -46,7 +46,7 @@ Implemented
 Common MDX features
 - Simple MDX Query (with template)
 - Functions:
-- - AVG
+	- AVG
 - - BottomCount
 - - BottomSum
 - - Count
