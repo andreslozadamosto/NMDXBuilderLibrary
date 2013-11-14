@@ -46,20 +46,20 @@ Implemented
 Common MDX features
 - Simple MDX Query (with template)
 - Functions:
--- AVG
--- BottomCount
--- BottomSum
--- Count
--- Covariance
--- CovarianceN
--- CrossJoin
--- Head
--- NonEmpty
--- Order
--- Tail
--- TopCount
--- With feature (partially)
--- Where feature
+- - AVG
+- - BottomCount
+- - BottomSum
+- - Count
+- - Covariance
+- - CovarianceN
+- - CrossJoin
+- - Head
+- - NonEmpty
+- - Order
+- - Tail
+- - TopCount
+- - With feature (partially)
+- - Where feature
 
 Vendors
 - SAP
